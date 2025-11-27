@@ -9,7 +9,6 @@ const Hero = () => {
     const handleSearch = (e) => {
         e.preventDefault();
         console.log('Searching for:', searchQuery);
-        // Handle search logic here
     };
 
     const steps = [
@@ -28,7 +27,7 @@ const Hero = () => {
 
             <div className="section-container relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
-                    {/* Trust Badge */}
+                    {/* Platform Badge */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -36,7 +35,7 @@ const Hero = () => {
                         className="inline-flex items-center gap-2 bg-accent-100 px-4 py-2 rounded-full mb-6 border border-primary-500/20"
                     >
                         <Award className="w-4 h-4 text-primary-600" />
-                        <span className="text-sm text-primary-700 font-semibold">موثوق من +50 جهة حكومية</span>
+                        <span className="text-sm text-primary-700 font-semibold">منصة التقارير والدراسات المتخصصة</span>
                     </motion.div>
 
                     {/* Main Heading */}
@@ -118,10 +117,7 @@ const Hero = () => {
                         className="flex flex-wrap gap-4 justify-center mb-12"
                     >
                         <Button variant="primary" size="lg" icon={TrendingUp}>
-                            تصفح 500+ تقرير مجاناً
-                        </Button>
-                        <Button variant="secondary" size="lg">
-                            تعرف على الأسعار
+                            تصفح 6000+ تقرير مجاناً
                         </Button>
                     </motion.div>
 
@@ -133,9 +129,9 @@ const Hero = () => {
                         className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
                     >
                         {[
-                            { value: '500+', label: 'تقرير متخصص' },
-                            { value: '50+', label: 'جهة حكومية' },
-                            { value: '98%', label: 'رضا العملاء' },
+                            { value: '40+', label: 'تصنيف' },
+                            { value: '6000+', label: 'تقرير' },
+                            { value: '800+', label: 'مصدر' },
                         ].map((stat, index) => (
                             <div key={index} className="text-center">
                                 <div className="text-4xl font-bold text-primary-500 mb-1">{stat.value}</div>

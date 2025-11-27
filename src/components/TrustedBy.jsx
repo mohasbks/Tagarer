@@ -16,18 +16,18 @@ const TrustedBy = () => {
     const trustMetrics = [
         {
             icon: Shield,
-            value: 'بيانات رسمية',
-            description: 'معتمدة من مصادر حكومية',
+            value: '40+',
+            description: 'تصنيف',
         },
         {
             icon: Award,
-            value: '500+ تقرير',
-            description: 'في مختلف المجالات',
+            value: '6000+',
+            description: 'تقرير',
         },
         {
             icon: Users,
-            value: '50+ جهة',
-            description: 'حكومية ومؤسسية',
+            value: '800+',
+            description: 'مصدر',
         },
     ];
 
@@ -41,10 +41,10 @@ const TrustedBy = () => {
                 className="text-center mb-12"
             >
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-500">
-                    موثوق من الجهات الرائدة
+                    قاعدة بيانات شاملة
                 </h2>
                 <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-                    يعتمد علينا العشرات من الجهات الحكومية والمؤسسات الكبرى في الحصول على تقارير موثوقة
+                    نوفر لك وصولاً لآلاف التقارير والدراسات من مئات المصادر الموثوقة في أكثر من 40 تصنيفاً متخصصاً
                 </p>
             </motion.div>
 
@@ -68,7 +68,23 @@ const TrustedBy = () => {
                 ))}
             </div>
 
-            {/* Partner Logos - With different sizes */}
+            {/* Sources Section */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-12"
+            >
+                <h3 className="text-2xl md:text-3xl font-bold mb-3 text-primary-500">
+                    مصادرنا الموثوقة
+                </h3>
+                <p className="text-base text-neutral-600 max-w-xl mx-auto">
+                    تقارير رسمية من جهات حكومية، اقتصادية، وأكاديمية.
+                </p>
+            </motion.div>
+
+            {/* Partner Logos - Clean & Simple */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center mb-8">
                 {logos.map((logo, index) => (
                     <motion.div

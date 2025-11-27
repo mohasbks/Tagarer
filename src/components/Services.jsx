@@ -1,36 +1,27 @@
 import { motion } from 'framer-motion';
-import {
-    TrendingUp,
-    Building2,
-    BarChart3,
-    FileText
-} from 'lucide-react';
+import { Search, Download, Link2, Database } from 'lucide-react';
 
 const Services = () => {
-    const categories = [
+    const features = [
         {
-            icon: TrendingUp,
-            title: 'التقارير الاقتصادية',
-            count: '120+ تقرير',
-            description: 'تحليلات اقتصادية شاملة ومؤشرات الأداء',
+            icon: Search,
+            title: 'بحث متقدم وسريع',
+            description: 'ابحث عن التقارير بسهولة حسب الجهة، المجال، أو الكلمات المفتاحية.',
         },
         {
-            icon: Building2,
-            title: 'الأداء الحكومي',
-            count: '85+ تقرير',
-            description: 'تقييم أداء الجهات والمؤسسات الحكومية',
+            icon: Download,
+            title: 'تحميل مباشر',
+            description: 'حمل التقارير بجودة عالية دون تعقيدات أو صعوبات.',
         },
         {
-            icon: BarChart3,
-            title: 'تحليل الأسواق',
-            count: '150+ تقرير',
-            description: 'دراسات الأسواق والفرص الاستثمارية',
+            icon: Link2,
+            title: 'روابط محدثة دائمًا',
+            description: 'تأكد من وصولك إلى التقارير دون عناء الروابط المعطلة.',
         },
         {
-            icon: FileText,
-            title: 'الدراسات المؤسسية',
-            count: '95+ تقرير',
-            description: 'تحليل وتقييم أداء الشركات والمؤسسات',
+            icon: Database,
+            title: 'قاعدة بيانات متكاملة',
+            description: 'مجموعة شاملة من التقارير في كل المجالات في مكان واحد.',
         },
     ];
 
@@ -44,34 +35,28 @@ const Services = () => {
                 className="text-center mb-12"
             >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-500">
-                    تصفح حسب التصنيف
+                    اكتشف مميزاتنا
                 </h2>
                 <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-                    اختر التصنيف المناسب للوصول السريع للتقارير التي تحتاجها
+                    أهم الخصائص التي تجعل "تقارير" وجهتك الأولى للمعرفة
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {categories.map((category, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="group"
+                        className="text-center"
                     >
-                        <div className="glass-hover rounded-xl p-6 bg-gradient-to-br from-white to-accent-50/30 h-full flex flex-col border-2 border-primary-500/10 cursor-pointer">
-                            <div className="w-14 h-14 rounded-lg bg-primary-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <category.icon className="w-7 h-7 text-white" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-2 text-primary-500">{category.title}</h3>
-                            <p className="text-sm text-accent-600 font-semibold mb-3">{category.count}</p>
-                            <p className="text-neutral-600 mb-4 flex-grow">{category.description}</p>
-                            <button className="text-primary-500 hover:text-primary-600 font-semibold text-sm transition-colors text-right">
-                                تصفح التقارير ←
-                            </button>
+                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <feature.icon className="w-10 h-10 text-white" />
                         </div>
+                        <h3 className="text-xl font-bold mb-3 text-primary-500">{feature.title}</h3>
+                        <p className="text-neutral-600 leading-relaxed">{feature.description}</p>
                     </motion.div>
                 ))}
             </div>

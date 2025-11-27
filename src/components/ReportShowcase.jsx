@@ -51,7 +51,7 @@ const ReportShowcase = () => {
                 className="text-center mb-12"
             >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-500">
-                    تقارير مميزة
+                    تقارير
                 </h2>
                 <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
                     اطلع على أمثلة من تقاريرنا الاحترافية في مختلف المجالات
@@ -113,7 +113,7 @@ const ReportShowcase = () => {
                 className="text-center"
             >
                 <button className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    تصفح جميع التقارير (500+)
+                    تصفح جميع التقارير (6000+)
                 </button>
             </motion.div>
         </section>

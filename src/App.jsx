@@ -1,29 +1,30 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import ReportShowcase from './components/ReportShowcase'
-import Services from './components/Services'
-import TrustedBy from './components/TrustedBy'
-import SubscriptionBenefits from './components/SubscriptionBenefits'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Reports from './pages/Reports';
+import Pricing from './pages/Pricing';
+import ReportDetails from './pages/ReportDetails';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
-        <ReportShowcase />
-        <Services />
-        <TrustedBy />
-        <SubscriptionBenefits />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  )
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/report/:id" element={<ReportDetails />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
