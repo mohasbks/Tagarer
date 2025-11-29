@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
+import Features from "../components/Features";
 import ReportShowcase from "../components/ReportShowcase";
-import Services from "../components/Services";
 import TrustedBy from "../components/TrustedBy";
 import SubscriptionBenefits from "../components/SubscriptionBenefits";
 import About from "../components/About";
@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <>
             <Hero />
+            <Features />
             <ReportShowcase />
-            <Services />
             <TrustedBy />
             <SubscriptionBenefits />
             <About />

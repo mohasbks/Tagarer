@@ -19,8 +19,8 @@ const Navbar = () => {
     const navLinks = [
         { name: 'التقارير', href: '/reports', isRoute: true },
         { name: 'الأسعار', href: '/pricing', isRoute: true },
-        { name: 'من نحن', href: '#about', isRoute: false },
-        { name: 'تواصل معنا', href: '#contact', isRoute: false },
+        { name: 'من نحن', href: '/about', isRoute: true },
+        { name: 'تواصل معنا', href: '/contact', isRoute: true },
     ];
 
     return (
@@ -48,23 +48,13 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            link.isRoute ? (
-                                <Link
-                                    key={link.name}
-                                    to={link.href}
-                                    className="text-neutral-700 hover:text-primary-500 transition-colors duration-300 font-medium"
-                                >
-                                    {link.name}
-                                </Link>
-                            ) : (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-neutral-700 hover:text-primary-500 transition-colors duration-300 font-medium"
-                                >
-                                    {link.name}
-                                </a>
-                            )
+                            <Link
+                                key={link.name}
+                                to={link.href}
+                                className="text-neutral-700 hover:text-primary-500 transition-colors duration-300 font-medium"
+                            >
+                                {link.name}
+                            </Link>
                         ))}
                         <Link to="/login">
                             <Button variant="outline" size="sm">
@@ -96,25 +86,14 @@ const Navbar = () => {
                         className="md:hidden mt-4 glass rounded-lg p-4"
                     >
                         {navLinks.map((link) => (
-                            link.isRoute ? (
-                                <Link
-                                    key={link.name}
-                                    to={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="block py-3 text-neutral-700 hover:text-primary-500 transition-colors duration-300"
-                                >
-                                    {link.name}
-                                </Link>
-                            ) : (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="block py-3 text-neutral-700 hover:text-primary-500 transition-colors duration-300"
-                                >
-                                    {link.name}
-                                </a>
-                            )
+                            <Link
+                                key={link.name}
+                                to={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className="block py-3 text-neutral-700 hover:text-primary-500 transition-colors duration-300"
+                            >
+                                {link.name}
+                            </Link>
                         ))}
                         <div className="border-t border-neutral-200 pt-4 mt-4 space-y-2">
                             <Link to="/login" onClick={() => setIsOpen(false)}>

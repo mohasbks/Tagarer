@@ -85,7 +85,7 @@ const TrustedBy = () => {
             </motion.div>
 
             {/* Partner Logos - Clean & Simple */}
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-12 items-center">
                 {logos.map((logo, index) => (
                     <motion.div
                         key={index}
@@ -104,21 +104,6 @@ const TrustedBy = () => {
                     </motion.div>
                 ))}
             </div>
-
-            {/* Testimonial */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mt-12 max-w-3xl mx-auto bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-8 text-white text-center"
-            >
-                <p className="text-lg italic mb-4">
-                    "منصة تقارير وفرت علينا وقتاً كبيراً في الحصول على بيانات موثوقة ومحدثة. التقارير احترافية وتساعدنا في اتخاذ قرارات استراتيجية مبنية على معلومات دقيقة."
-                </p>
-                <div className="text-accent-100 font-semibold">
-                    — مسؤول تنفيذي في جهة حكومية رائدة
-                </div>
-            </motion.div>
         </section>
     );
 };
