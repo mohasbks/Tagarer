@@ -32,7 +32,7 @@ const SignUp = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-accent-50 via-white to-accent-50/30 pt-24 pb-16">
+        <div className="min-h-screen bg-gradient-to-br from-accent-50 via-white to-accent-50/30 pt-20 pb-12">
             <div className="section-container">
                 <div className="max-w-2xl mx-auto">
                     <motion.div
@@ -149,8 +149,8 @@ const SignUp = () => {
                                         type="button"
                                         onClick={() => setFormData({ ...formData, accountType: 'individual' })}
                                         className={`flex items-center gap-3 p-4 border-2 rounded-lg transition-all ${formData.accountType === 'individual'
-                                                ? 'border-primary-500 bg-primary-50'
-                                                : 'border-neutral-200 hover:border-primary-300'
+                                            ? 'border-primary-500 bg-primary-50'
+                                            : 'border-neutral-200 hover:border-primary-300'
                                             }`}
                                     >
                                         <User className="w-5 h-5" />
@@ -160,8 +160,8 @@ const SignUp = () => {
                                         type="button"
                                         onClick={() => setFormData({ ...formData, accountType: 'company' })}
                                         className={`flex items-center gap-3 p-4 border-2 rounded-lg transition-all ${formData.accountType === 'company'
-                                                ? 'border-primary-500 bg-primary-50'
-                                                : 'border-neutral-200 hover:border-primary-300'
+                                            ? 'border-primary-500 bg-primary-50'
+                                            : 'border-neutral-200 hover:border-primary-300'
                                             }`}
                                     >
                                         <Building className="w-5 h-5" />

@@ -95,7 +95,7 @@ const Pricing = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-accent-50 via-white to-accent-50/30 pt-24 pb-16">
+        <div className="min-h-screen bg-gradient-to-br from-accent-50 via-white to-accent-50/30 pt-20 pb-12">
             <div className="section-container">
                 {/* Hero Section */}
                 <motion.div
